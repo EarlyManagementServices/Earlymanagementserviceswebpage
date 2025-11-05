@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Management Services</title>
+    <meta name="description" content="Professional facilities management and maintenance services. Early Management Services — keeping your buildings and spaces in top condition.">
+    <link rel="canonical" href="https://earlymanagementservices.com/">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #004aad;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #004aad;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .service {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            border-color: #004aad;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 0.9em;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background: #004aad;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #00337a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Early Management Services</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Early Management Services</h2>
+        <p style="text-align: center; max-width: 700px; margin: 20px auto;">
+            We provide professional cleaning, maintenance, and facility management services to keep your properties running smoothly, safely, and efficiently.
+            Trusted by businesses and organizations for reliable, high-quality service.
+        </p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p style="max-width: 800px; margin: 20px auto; text-align: center;">
+            Early Management Services is committed to delivering dependable, top-quality facilities management.
+            With years of experience and a dedicated team, we ensure your spaces remain clean, safe, and fully functional — so you can focus on what matters most.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Commercial Cleaning</h3>
+                <p>Scheduled or on-demand cleaning for offices, retail, and educational spaces — always spotless and professional.</p>
+            </div>
+            <div class="service">
+                <h3>Building Maintenance</h3>
+                <p>Preventive and responsive maintenance services to keep your facilities operating at their best, inside and out.</p>
+            </div>
+            <div class="service">
+                <h3>Groundskeeping</h3>
+                <p>Outdoor care and landscaping services that ensure your property always makes a great impression.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <!-- Use Formspree or your backend email service -->
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">
+            Or email us directly at <strong>info@earlymanagementservices.com</strong>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Early Management Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
