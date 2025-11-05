@@ -152,8 +152,22 @@
             background: #222;
             color: white;
             text-align: center;
-            padding: 20px 10px;
+            padding: 30px 10px;
             font-size: 0.9em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact {
+            margin-top: 10px;
+            line-height: 1.6;
         }
 
         /* Responsive Design */
@@ -172,6 +186,10 @@
             header h1 {
                 font-size: 1.6em;
                 text-align: center;
+            }
+
+            footer {
+                font-size: 0.95em;
             }
         }
     </style>
@@ -211,7 +229,6 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <div class="contact-form">
-            <!-- Replace 'your-form-id' with your actual Formspree ID -->
             <form action="https://formspree.io/f/your-form-id" method="POST">
                 <label for="name" style="display:none;">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -232,6 +249,12 @@
 
     <footer>
         <p>&copy; 2025 Early Management Services. All rights reserved.</p>
+        <div class="footer-contact">
+            <a href="mailto:EarlyManagementServices@gmail.com">EarlyManagementServices@gmail.com</a><br>
+            <a href="tel:7173660322">717-366-0322</a><br>
+            30 N Gould St Ste N<br>
+            Sheridan, WY 82801
+        </div>
     </footer>
 </body>
 </html>
