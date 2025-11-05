@@ -35,12 +35,14 @@
             padding: 25px 40px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between; /* Left and right sides */
             position: sticky;
             top: 0;
             z-index: 1000;
+            flex-wrap: wrap;
         }
 
+        /* Left side: company name */
         header h1 {
             font-size: 1.8em;
             line-height: 1.2;
@@ -49,6 +51,22 @@
 
         header h1 span {
             display: block;
+        }
+
+        /* Right side: contact info */
+        .header-contact {
+            text-align: right;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-contact a:hover {
+            text-decoration: underline;
         }
 
         section {
@@ -99,28 +117,6 @@
             background: #f0f0f0;
         }
 
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
-
-        .service {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .service:hover {
-            transform: scale(1.05);
-            border-color: #004aad;
-        }
-
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -163,17 +159,19 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
+            }
+
+            .header-contact {
+                text-align: center;
+                margin-top: 10px;
             }
 
             header h1 {
                 font-size: 1.6em;
-            }
-
-            .services {
-                flex-direction: column;
-                align-items: center;
+                text-align: center;
             }
         }
     </style>
@@ -185,13 +183,19 @@
             <span>Management</span>
             <span>Services</span>
         </h1>
+        <div class="header-contact">
+            <a href="mailto:EarlyManagementServices@gmail.com">EarlyManagementServices@gmail.com</a><br>
+            <a href="tel:7173660322">717-366-0322</a><br>
+            30 N Gould St Ste N<br>
+            Sheridan, WY 82801
+        </div>
     </header>
 
     <section id="home">
         <h2>Reliable Facilities Management</h2>
         <p>
-            Professional cleaning, maintenance, and care — keeping your spaces in top condition. 
-            Trusted by businesses and organizations for reliable, high-quality service.
+            We provide professional facility maintenance services to keep your properties running smoothly, safely, and efficiently. 
+            Trusted by our clients for our reliable, high-quality service.
         </p>
         <a href="#contact">Get a Quote</a>
     </section>
@@ -199,27 +203,9 @@
     <section id="about">
         <h2>About Us</h2>
         <p style="max-width: 800px; margin: 20px auto; text-align: center;">
-            Early Management Services is committed to delivering dependable, top-quality facilities management.
-            With years of experience and a dedicated team, we ensure your spaces remain clean, safe, and fully functional — so you can focus on what matters most.
+            Early Management Services is an ambitious spin off organization with a founding staff that brings over a decade and a half 
+            of facilities management excellence to the table in the name of delivering dependable, top-quality facilities maintenance solutions.
         </p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Commercial Cleaning</h3>
-                <p>Scheduled or on-demand cleaning for offices, retail, and educational spaces — always spotless and professional.</p>
-            </div>
-            <div class="service">
-                <h3>Building Maintenance</h3>
-                <p>Preventive and responsive maintenance services to keep your facilities operating at their best, inside and out.</p>
-            </div>
-            <div class="service">
-                <h3>Groundskeeping</h3>
-                <p>Outdoor care and landscaping services that ensure your property always makes a great impression.</p>
-            </div>
-        </div>
     </section>
 
     <section id="contact">
@@ -240,7 +226,7 @@
             </form>
         </div>
         <p style="text-align: center; margin-top: 20px;">
-            Or email us directly at <strong>info@earlymanagementservices.com</strong>
+            Or email us directly at <strong>EarlyManagementServices@gmail.com</strong>
         </p>
     </section>
 
