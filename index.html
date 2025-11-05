@@ -6,6 +6,14 @@
     <title>Early Management Services</title>
     <meta name="description" content="Professional facilities management and maintenance services. Early Management Services — keeping your buildings and spaces in top condition.">
     <link rel="canonical" href="https://earlymanagementservices.com/">
+
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Early Management Services">
+    <meta property="og:description" content="Professional facilities management and maintenance services.">
+    <meta property="og:image" content="https://earlymanagementservices.com/og-image.jpg">
+    <meta property="og:url" content="https://earlymanagementservices.com/">
+    <meta name="twitter:card" content="summary_large_image">
+
     <style>
         /* Basic Reset */
         * {
@@ -24,30 +32,23 @@
         header {
             background: #004aad;
             color: white;
-            padding: 20px 0;
-            text-align: center;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
-            margin-bottom: 10px;
-            font-size: 2em;
+            font-size: 1.8em;
+            line-height: 1.2;
+            text-align: left;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
+        header h1 span {
+            display: block;
         }
 
         section {
@@ -60,6 +61,42 @@
             text-align: center;
             margin-bottom: 30px;
             color: #004aad;
+        }
+
+        /* Hero Section */
+        #home {
+            background: linear-gradient(rgba(0, 74, 173, 0.7), rgba(0, 74, 173, 0.7)), 
+                        url('https://earlymanagementservices.com/hero-bg.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        #home h2 {
+            color: white;
+            font-size: 2em;
+        }
+
+        #home p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        #home a {
+            display: inline-block;
+            background: white;
+            color: #004aad;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #home a:hover {
+            background: #f0f0f0;
         }
 
         .services {
@@ -76,20 +113,12 @@
             padding: 20px;
             width: 300px;
             text-align: center;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .service:hover {
             transform: scale(1.05);
             border-color: #004aad;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 0.9em;
         }
 
         .contact-form {
@@ -122,27 +151,49 @@
         .contact-form button:hover {
             background: #00337a;
         }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Early Management Services</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>
+            <span>Early</span>
+            <span>Management</span>
+            <span>Services</span>
+        </h1>
     </header>
 
     <section id="home">
-        <h2>Welcome to Early Management Services</h2>
-        <p style="text-align: center; max-width: 700px; margin: 20px auto;">
-            We provide professional cleaning, maintenance, and facility management services to keep your properties running smoothly, safely, and efficiently.
+        <h2>Reliable Facilities Management</h2>
+        <p>
+            Professional cleaning, maintenance, and care — keeping your spaces in top condition. 
             Trusted by businesses and organizations for reliable, high-quality service.
         </p>
+        <a href="#contact">Get a Quote</a>
     </section>
 
     <section id="about">
@@ -174,11 +225,17 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <div class="contact-form">
-            <!-- Use Formspree or your backend email service -->
+            <!-- Replace 'your-form-id' with your actual Formspree ID -->
             <form action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <label for="name" style="display:none;">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email" style="display:none;">Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+
+                <label for="message" style="display:none;">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
                 <button type="submit">Send Message</button>
             </form>
         </div>
