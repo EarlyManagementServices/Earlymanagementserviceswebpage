@@ -75,13 +75,38 @@
             margin: auto;
         }
 
+        /* Reduce top padding for About section only */
+        #about {
+            padding-top: 30px; /* cut in half */
+        }
+
         section h2 {
             text-align: center;
             margin-bottom: 30px;
             color: #004aad;
         }
 
-        /* Contact Form */
+        /* Hero Section */
+        #home {
+            background: linear-gradient(rgba(0, 74, 173, 0.7), rgba(0, 74, 173, 0.7)), 
+                        url('https://earlymanagementservices.com/hero-bg.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        #home h2 {
+            color: white;
+            font-size: 2em;
+        }
+
+        #home p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -174,8 +199,13 @@
         </div>
     </header>
 
-    <!-- Hero section removed -->
-    <section id="home"></section>
+    <section id="home">
+        <h2>Reliable Facilities Management</h2>
+        <p>
+            We provide professional facility maintenance services to keep your properties running smoothly, safely, and efficiently. 
+            Trusted by our clients for our reliable, high-quality service.
+        </p>
+    </section>
 
     <section id="about">
         <h2>About Us</h2>
