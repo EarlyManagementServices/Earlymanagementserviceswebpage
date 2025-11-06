@@ -23,4 +23,238 @@
         }
 
         body {
-            font-family: "Segoe
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #004aad;
+            color: white;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Left and right sides */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        /* Left side: company name */
+        header h1 {
+            font-size: 1.8em;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        header h1 span {
+            display: block;
+        }
+
+        /* Right side: contact info */
+        .header-contact {
+            text-align: right;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-contact a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #004aad;
+        }
+
+        /* Hero Section */
+        #home {
+            background: linear-gradient(rgba(0, 74, 173, 0.7), rgba(0, 74, 173, 0.7)), 
+                        url('https://earlymanagementservices.com/hero-bg.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        #home h2 {
+            color: white;
+            font-size: 2em;
+        }
+
+        #home p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        #home a {
+            display: inline-block;
+            background: white;
+            color: #004aad;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #home a:hover {
+            background: #f0f0f0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background: #004aad;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #00337a;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-contact {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+                text-align: center;
+            }
+
+            footer {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <span>Early</span>
+            <span>Management</span>
+            <span>Services</span>
+        </h1>
+        <div class="header-contact">
+            <a href="mailto:EarlyManagementServices@Gmail.com">EarlyManagementServices@Gmail.com</a><br>
+            <a href="tel:7173660322">717-366-0322</a><br>
+            30 N Gould St Ste N<br>
+            Sheridan, WY 82801
+        </div>
+    </header>
+
+    <section id="home">
+        <h2>Reliable Facilities Management</h2>
+        <p>
+            We provide professional facility maintenance services to keep your properties running smoothly, safely, and efficiently. 
+            Trusted by our clients for our reliable, high-quality service.
+        </p>
+        <a href="#contact">Get a Quote</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p style="max-width: 800px; margin: 20px auto; text-align: center;">
+            Early Management Services is an ambitious spin off organization with a founding staff that brings over a decade and a half 
+            of facilities management excellence to the table in the name of delivering dependable, top-quality facilities maintenance solutions.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name" style="display:none;">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email" style="display:none;">Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+
+                <label for="message" style="display:none;">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">
+            Or email us directly at <strong>EarlyManagementServices@Gmail.com</strong>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Early Management Services. All rights reserved.</p>
+        <div class="footer-contact">
+            <a href="mailto:EarlyManagementServices@Gmail.com">EarlyManagementServices@Gmail.com</a><br>
+            <a href="tel:7173660322">717-366-0322</a><br>
+            30 N Gould St Ste N<br>
+            Sheridan, WY 82801
+        </div>
+    </footer>
+</body>
+</html>
