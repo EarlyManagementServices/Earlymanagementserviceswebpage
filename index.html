@@ -75,6 +75,11 @@
             margin: auto;
         }
 
+        /* Reduce top padding for About section only */
+        #about {
+            padding-top: 30px; /* cut in half */
+        }
+
         section h2 {
             text-align: center;
             margin-bottom: 30px;
@@ -100,11 +105,6 @@
             max-width: 700px;
             margin: 20px auto;
             font-size: 1.1em;
-        }
-
-        /* About section */
-        #about {
-            padding-top: 30px; /* Reduced top padding by 50% */
         }
 
         .contact-form {
@@ -218,7 +218,7 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <div class="contact-form">
-            <form action="https://formspree.io/f/mwpwgbrg" method="POST">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
                 <label for="name" style="display:none;">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
 
